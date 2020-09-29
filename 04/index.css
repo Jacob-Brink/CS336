@@ -1,0 +1,11 @@
+p {
+    display: inline;
+}
+
+.hint-hidden {
+    display: none;
+}
+
+.hint-shown {
+    display: inline;
+}
