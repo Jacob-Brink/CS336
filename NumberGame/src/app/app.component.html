@@ -1,0 +1,29 @@
+<html>
+<h1>{{title}}</h1>
+
+<button (click)="randomTarget()">Random</button>
+
+<br>
+
+<label for="target">Guess the sqrt of </label>
+
+<input [(ngModel)]="target" name="target" id="target" value="">
+
+<br>
+<br>
+
+<div *ngIf="!win">
+  <label>Enter your guess: </label>
+  <input [(ngModel)]="guess" name="guess" id="guess" value="" (keyup.enter)="submitGuess()">
+</div>
+
+<div>
+  <p *ngFor="let feed of feedback">{{feed}}</p>
+  <div *ngIf="win">
+    <p>{{feedback.length}}</p>
+    <br>
+    <button (click)="resetGame()">New Game</button>
+  </div>
+</div>
+
+</html>

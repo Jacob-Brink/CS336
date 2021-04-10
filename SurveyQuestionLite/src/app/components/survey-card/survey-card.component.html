@@ -1,0 +1,26 @@
+<mat-card class="main-card">
+
+  <mat-card-header class="header">
+    <mat-card-title class="title">{{question}}</mat-card-title>
+    <mat-icon class="icon">help_center</mat-icon>
+  </mat-card-header>
+
+  <mat-card-content class="content">
+      Choose your best answer, from {{minValue}} to {{maxValue}}{{units !== '' ? ' ' + units : ''}}.
+  </mat-card-content>
+
+  <mat-card-actions class="card-actions">
+    <mat-slider
+      (change)="sliderChanged($event)"
+      min={{minValue}}
+      max={{maxValue}}
+      step="1"
+      value={{minValue}}
+      thumbLabel
+      tickInterval="1"
+      class="slider"
+    >
+    </mat-slider>
+  </mat-card-actions>
+  
+</mat-card>

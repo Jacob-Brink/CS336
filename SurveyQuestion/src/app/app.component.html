@@ -1,0 +1,25 @@
+<app-survey-card
+  question="Do you like this presentation?"
+  minValue="1"
+  maxValue="5"
+  (result)="gotResult($event)"
+  >
+</app-survey-card>
+
+<app-survey-card
+  question="What is your average grade in this class?"
+  minValue="50"
+  maxValue="100"
+  units="percent"
+  (result)="gotResult($event)"
+  >
+</app-survey-card>
+
+<app-survey-card
+  question="What is your battery at on your smart phone now?"
+  minValue="0"
+  maxValue="100"
+  units="watts"
+  (result)="gotResult($event)"
+  >
+</app-survey-card>
